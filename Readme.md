@@ -2,6 +2,7 @@
 
 * Студент: [Екатерина Долгова](https://up.htmlacademy.ru/htmlcss-individual/3/user/2411191).
 * Наставник: [Ирина Антипина](https://htmlacademy.ru/profile/id2108789).
+* Сайт: [Седона](https://dolgova-ekaterina.github.io/2411191-sedona-3/).
 
 ---
 
