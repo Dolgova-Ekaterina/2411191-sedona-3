@@ -4,39 +4,42 @@
     <head>
         <meta charset="utf-8">
         <title>HTML Academy: Каталог Седона</title>
+            <link rel="icon" href="favicon.ico">
+
     </head>
 
     <body>
         <div class="page">
-            <header class="header">
-                <a href="#" class="logo-link">
-                    <img src="#" class="logo-link__img" alt="Логотип сайта Седона">
-                </a>
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="index.html" class="nav__link">Главная</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__link">О седоне</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="catalog.html" class="nav__link nav__link--current">Гостиницы</a>
-                        </li>
-                    </ul>
-                </nav>
-                <nav class="nav-user">
-                    <ul class="nav-user__list">
-                        <li class="nav-user__item"><a href="#" class="nav-user__link"><span
-                                    class="visually-hidden">Поиск по сайту</span></a>
-                        </li>
-                        <li class="nav-user__item"><a href="#" class="nav-user__link"><span class="visually-hidden">Мне
-                                    понравилось</span></a>
-                        </li>
-                    </ul>
-                    <a href="#" class="nav-user__link button">Хочу сюда!</a>
-                </nav>
-            </header>
+        <header class="header">
+        <a href="#" class="logo-link">
+          <img src="images/logo-sedona.svg" width="140" height="70" class="logo-link__img" alt="Логотип сайта Седона">
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link nav__link--current">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">О седоне</a>
+            </li>
+            <li class="nav__item">
+              <a href="catalog.html" class="nav__link">Гостиницы</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="nav-user">
+          <ul class="nav-user__list">
+            <li class="nav-user__item"><a href="#" class="nav-user__link"><span class="visually-hidden">Поиск по
+                  сайту</span></a>
+            </li>
+            <li class="nav-user__item"><a href="#" class="nav-user__link"><span class="visually-hidden">Мне
+                  понравилось</span> <span class="nav-user__count">12</span>
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="nav-user__link button">Хочу сюда!</a>
+        </nav>
+      </header>
 
             <main class="main">
                 <section class="filter">
@@ -44,30 +47,32 @@
                     <nav class="filter__nav breadcrumbs">
                         <ol class="breadcrumbs__list">
                             <li class="breadcrumbs__item">
-                                <a href="#" class="breadcrumbs__link"></a>
+                                <a href="index.html" class="breadcrumbs__link breadcrumbs__link--home">
+                                    <span class="visually-hidden">Главная</span>
+                                </a>
                             </li>
                             <li class="breadcrumbs__item">
                                 <a href="#" class="breadcrumbs__link">Гостиницы</a>
                             </li>
                         </ol>
                     </nav>
-                    <form class="filter__form form" action="https://echo.htmlacademy.ru/" method="post">
+                    <form class="filter__form form" action="https://echo.htmlacademy.ru/" method="get">
                         <fieldset class="form__wrapper">
                             <legend class="form__title">Инфраструктура:</legend>
                             <ul class="form__list">
                                 <li class="form__item">
-                                    <label class="form__label">
-                                        <input class="form__input" type="checkbox" checked>Бассейн
+                                    <label class="form__label" for="pool">
+                                        <input class="form__input" type="checkbox" id="pool" checked>Бассейн
                                     </label>
                                 </li>
                                 <li class="form__item">
-                                    <label class="form__label">
-                                        <input class="form__input" type="checkbox" checked>Парковка
+                                    <label class="form__label" for="parking">
+                                        <input class="form__input" type="checkbox" id="parking" checked>Парковка
                                     </label>
                                 </li>
                                 <li class="form__item">
-                                    <label class="form__label">
-                                        <input class="form__input" type="checkbox">Wi-Fi
+                                    <label class="form__label" for="wifi">
+                                        <input class="form__input" type="checkbox" id="wifi">Wi-Fi
                                     </label>
                                 </li>
                             </ul>
@@ -78,18 +83,18 @@
                             <legend class="form__title">Тип жилья:</legend>
                             <ul class="form__list">
                                 <li class="form__item">
-                                    <label class="form__label">
-                                        <input class="form__input" type="radio" checked>Гостиница
+                                    <label class="form__label" for="hotel">
+                                        <input class="form__input" type="radio" id="hotel" checked>Гостиница
                                     </label>
                                 </li>
                                 <li class="form__item">
-                                    <label class="form__label">
-                                        <input class="form__input" type="radio">Мотель
+                                    <label class="form__label" for="motel">
+                                        <input class="form__input" type="radio" id="motel">Мотель
                                     </label>
                                 </li>
                                 <li class="form__item">
-                                    <label class="form__label">
-                                        <input class="form__input" type="radio">Апартаменты
+                                    <label class="form__label" for="apartment">
+                                        <input class="form__input" type="radio" id="apartment">Апартаменты
                                     </label>
                                 </li>
                             </ul>
@@ -99,13 +104,13 @@
                             <legend class="form__title">Стоимость, ₽:</legend>
                             <ul class="form__list price">
                                 <li class="price__item">
-                                    <label class="price__label">
-                                        <input class="price__input" value="0" placeholder="от">
+                                    <label class="price__label" for="start-price">
+                                        <input class="price__input" value="0" placeholder="от" id="start-price">
                                     </label>
                                 </li>
                                 <li class="price__item">
-                                    <label class="price__label">
-                                        <input class="price__input" value="9000" placeholder="до">
+                                    <label class="price__label" for="finish-price">
+                                        <input class="price__input" value="9000" placeholder="до" id="finish-price">
                                     </label>
                                 </li>
                             </ul>
@@ -137,17 +142,17 @@
                         </select>
                         <ul class="catalog__view view">
                             <li class="view__item">
-                                <a href="#" class="view__link">
+                                <a href="catalog.html?view=tile" class="view__link view__link--tile">
                                     <span class="visually-hidden">Показать карточками</span>
                                 </a>
                             </li>
                             <li class="view__item">
-                                <a href="#" class="view__link">
+                                <a href="catalog.html?view=card" class="view__link view__link--card">
                                     <span class="visually-hidden">Показать по одному крупным планом</span>
                                 </a>
                             </li>
                             <li class="view__item">
-                                <a href="#" class="view__link">
+                                <a href="catalog.html?view=list" class="view__link view__link--list">
                                     <span class="visually-hidden">Показать списком</span>
                                 </a>
                             </li>
@@ -156,7 +161,7 @@
                     <ul class="catalog__list product">
                         <li class="product__item">
                             <a href="#" class="product__link">
-                                <img src="#" alt="Amara Resort & Spa" class="product__img">
+                                <img src="images/hotel-amara.jpg" width="300" height="212" alt="Amara Resort & Spa" class="product__img">
                             </a>
                             <a href="#" class="product__link">
                                 <h3 class="product__title">Amara Resort & Spa</h3>
@@ -181,7 +186,7 @@
 
                         <li class="product__item">
                             <a href="#" class="product__link">
-                                <img src="#" alt="Villas at Poco Diablo" class="product__img">
+                                <img src="images/hotel-villas.jpg" width="300" height="212" alt="Villas at Poco Diablo" class="product__img">
                             </a>
                             <a href="#" class="product__link">
                                 <h3 class="product__title">Villas at Poco Diablo</h3>
@@ -205,7 +210,7 @@
 
                         <li class="product__item">
                             <a href="#" class="product__link">
-                                <img src="#" alt="Desert Quail Inn" class="product__img">
+                                <img src="images/hotel-desert.jpg" width="300" height="212" alt="Desert Quail Inn" class="product__img">
                             </a>
                             <a href="#" class="product__link">
                                 <h3 class="product__title">Desert Quail Inn</h3>
@@ -228,7 +233,7 @@
 
                         <li class="product__item">
                             <a href="#" class="product__link">
-                                <img src="#" alt="GreenTree Inn" class="product__img">
+                                <img src="images/hotel-greentree.jpg" width="300" height="212" alt="GreenTree Inn" class="product__img">
                             </a>
                             <a href="#" class="product__link">
                                 <h3 class="product__title">GreenTree Inn</h3>
@@ -272,38 +277,39 @@
                 </section>
 
                 <section class="subscription subscription-light">
-  <h2 class="subscription__title title">Подпишитесь на рассылку</h2>
-  <p class="subscription__text text">Только полезная информация и никакого спама, честное бойскаутское!</p>
-  <form class="subscription__form form-sub" action="https://echo.htmlacademy.ru/" method="post">
-    <label class="form-sub__name">
-       <input class="form-sub__input" placeholder="Ваш e-mail">
-    </label>
+                    <h2 class="subscription__title title">Подпишитесь на рассылку</h2>
+                    <p class="subscription__text text">Только полезная информация и никакого спама, честное
+                        бойскаутское!</p>
+                    <form class="subscription__form form-sub" action="https://echo.htmlacademy.ru/" method="post">
+                        <label class="form-sub__name" for="email">
+                            <input class="form-sub__input" id="email" placeholder="Ваш e-mail">
+                        </label>
 
-    <button class="form-sub__button button" type="submit">Подписаться</button>
-  </form>
-</section>
+                        <button class="form-sub__button button" type="submit">Подписаться</button>
+                    </form>
+                </section>
             </main>
 
-            <footer class="footer">
+      <footer class="footer">
 
-                <ul class="footer__nav social-list">
-                    <li class="social-list__item"><a href="https://vk.ru/htmlacademy" class="social-list__link">
+    <ul class="footer__nav social-list">
+                    <li class="social-list__item"><a href="https://vk.com/htmlacademy" class="social-list__link">
                             <span class="social-list__icon visually-hidden">Ссылка на вконтакте</span>
                         </a></li>
-                    <li class="social-list__item"><a href="https://htmlacademy.t.me" class="social-list__link">
+                    <li class="social-list__item"><a href="https://t.me/htmlacademy" class="social-list__link">
                             <span class="social-list__icon visually-hidden">Ссылка на телеграм</span>
                         </a></li>
-                    <li class="social-list__item"><a href="https://www.youtube.com/@HTMLAcademyTV"
+                    <li class="social-list__item"><a href="https://www.youtube.com/user/htmlacademyru"
                             class="social-list__link">
                             <span class="social-list__icon visually-hidden">Ссылка на ютуб</span>
                         </a></li>
                 </ul>
-                <a href="tel:+78128121212" class="footer__link">+7 (812) 812-12-12</a>
-                <a href="#" class="footer__link">
-                    <img src="" class="footer__img-logo" alt="Логотип Academy HTML">
-                </a>
+        <a href="tel:+78128121212" class="footer__link">+7 (812) 812-12-12</a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer__link">
+          <img src="images/html-academy-logo.svg" width="115" height="33" class="footer__img-logo" alt="Логотип Academy HTML">
+        </a>
 
-            </footer>
+      </footer>
         </div>
     </body>
 
